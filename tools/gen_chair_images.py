@@ -2,8 +2,8 @@
 """Generate AI concept renders of the chairs with Google Gemini.
 
 Reads prompts from tools/chair_prompts.json and writes JPEGs to img/chairs/.
-Uses Gemini's OpenAI-compatible endpoint, which takes the API key as a
-Bearer token:
+Tries Gemini's native API first (key in the x-goog-api-key header), then the
+OpenAI-compatible endpoint (key as a Bearer token), then Imagen:
 
     GEMINI_API_KEY=your-key python3 tools/gen_chair_images.py            # all
     GEMINI_API_KEY=your-key python3 tools/gen_chair_images.py slug1 slug2
@@ -81,8 +81,30 @@ def find_b64(obj):
     return None
 
 
+def post_native(model, prompt):
+    """Gemini's native API, which takes the key in the x-goog-api-key header."""
+    req = urllib.request.Request(
+        f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+        data=json.dumps({
+            "contents": [{"parts": [{"text": prompt}]}],
+            "generationConfig": {"responseModalities": ["IMAGE", "TEXT"]},
+        }).encode(),
+        headers={"Content-Type": "application/json", "x-goog-api-key": KEY},
+    )
+    with urllib.request.urlopen(req, timeout=180) as r:
+        return json.load(r)
+
+
 def generate(prompt):
     errors = []
+    for model in CHAT_MODELS:
+        try:
+            b64 = find_b64(post_native(model, prompt).get("candidates", []))
+            if b64:
+                return base64.b64decode(b64), model
+            errors.append(f"{model} (native): no image in response")
+        except urllib.error.HTTPError as e:
+            errors.append(f"{model} (native): HTTP {e.code} {e.read()[:300]!r}")
     for model in CHAT_MODELS:
         try:
             r = post("/chat/completions", {

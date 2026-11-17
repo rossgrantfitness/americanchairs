@@ -1,0 +1,40 @@
+[
+  {
+    "slug": "concept-3150hr",
+    "prompt": "A heavy-duty 24/7 intensive-use operator task chair of the kind used in 911 dispatch centers: black fabric upholstery, a tall, thick, deeply cushioned high back, a separate small adjustable padded headrest pad mounted on a vertical post above the back, wide padded height-adjustable arms, a thick cushioned seat, and a heavy black SEVEN-leg steel base with seven dual-wheel casters. Utilitarian and rugged rather than stylish."
+  },
+  {
+    "slug": "np-big-tall-247",
+    "prompt": "A big-and-tall 24/7 ergonomic task chair built for users up to 500 lb: black fabric upholstery, an extra-wide 27-inch cushioned seat with a rounded waterfall front edge, a large tall upholstered back with a gentle lumbar curve, chunky oversized padded arms on heavy black steel arm supports, an upholstered headrest, and a broad heavy-duty black five-star base with large casters."
+  },
+  {
+    "slug": "era-chairman",
+    "prompt": "A plush oversized big-and-tall executive office chair rated for 500 lb: black leather, a separate pillowed two-piece back made of stacked horizontal pillow sections, a thick wrap-around pillow headrest at the top, an extra-wide 26-inch thickly cushioned seat, padded flip-up arms, and a wide black steel five-star base with large casters."
+  },
+  {
+    "slug": "bodybilt-captain-3500",
+    "prompt": "A heavy-duty 24/7 executive office chair: smooth black leather, a contoured high manager-style back with sculpted lumbar support, a small cylindrical neck-roll pillow strapped near the top of the back, heavy-duty T-shaped height-adjustable arms with wide padded tops, a sculpted contoured seat, and a black five-star base on casters."
+  },
+  {
+    "slug": "bodybilt-gx4",
+    "prompt": "An office-style ergonomic gaming chair (NOT a racing-style bucket seat, no side bolsters, no racing stripes): an extra-wide upholstered black fabric seat, a contoured padded upholstered back with a lumbar curve, adjustable padded arms, a compact adjustable headrest, and a black five-star base. Clean, grown-up, understated charcoal and black styling."
+  },
+  {
+    "slug": "hero-gaming-setup",
+    "raw": true,
+    "max": 1000,
+    "prompt": "Photorealistic wide photo of a tidy home office and gaming setup at dusk: a heavy-duty black ergonomic office chair with a headrest pulled up to a solid wooden desk with a gaming PC tower, two monitors showing abstract blue light, a mechanical keyboard, and a small American flag in a desk holder. Warm desk-lamp light, cozy and premium. No readable text, no logos, no people."
+  },
+  {
+    "slug": "hero-dispatch",
+    "raw": true,
+    "max": 1000,
+    "prompt": "Photorealistic wide photo of a modern 24/7 emergency dispatch center: rows of consoles with multiple monitors and heavy-duty black fabric operator chairs with headrests, calm blue ambient lighting, very clean. No readable text, no logos, no people."
+  },
+  {
+    "slug": "eagle-clipart",
+    "raw": true,
+    "max": 320,
+    "prompt": "1990s computer clip art of a proud bald eagle with wings spread, holding a small American flag banner, simple flat colors with bold black outlines, on a plain white background. Retro 1997 web graphic style. No text."
+  }
+]
